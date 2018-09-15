@@ -1,3 +1,18 @@
+/*
+
+title: style.css
+author: aman sharma
+
+*/
+
+html, body {
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar {
       font-family: Montserrat, sans-serif;
       margin-bottom: 0;
@@ -19,3 +34,16 @@
   }
   .navbar-default .navbar-toggle {
       border-color: transparent;
+    }
+
+#home{
+  height: 80%;
+  width: 100%;
+  max-height: 80%;
+  padding: 0;
+  background-color: red;
+}
+
+.text-center > h1{
+  margin-top: 15%;
+}
