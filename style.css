@@ -16,21 +16,21 @@ body::-webkit-scrollbar {
 .navbar {
       font-family: Montserrat, sans-serif;
       margin-bottom: 0;
-      background-color: #2D2D30;
-      border: 0;
+      background-color: #2D2D30 !important;
+      border: 0 !important;
       font-size: 11px !important;
       letter-spacing: 4px;
       opacity: 0.9;
   }
   .navbar li a, .navbar .navbar-brand {
-      color: black !important;
+      color: #d5d5d5 !important;
   }
   .navbar-nav li a:hover {
       color: #fff !important;
   }
   .navbar-nav li.active a {
       color: #fff !important;
-      background-color: #29292c !important;
+      background-color: black !important;
   }
   .navbar-default .navbar-toggle {
       border-color: transparent;
@@ -45,6 +45,48 @@ body::-webkit-scrollbar {
   background-position: center;
 }
 
-.text-center > h1{
-  margin-top: 15%;
+#about{
+  height: 80%;
+  width: 100%;
+  max-height: 80%;
+  padding: 0;
+}
+
+.column{
+  position: absolute;
+  padding: 0;
+  height: 80%;
+  overflow-x: hidden;
+}
+
+.left{
+  background-color: black;
+  left: 0;
+  width: 30%;
+}
+
+.right{
+  background-color: #EBEBEB;
+  right: 0;
+  width: 70%;
+}
+
+.right > .text-center {
+  font-family: Montserrat, sans-serif;
+  margin: 5% 4% 2% 8%;
+  font-size: 1.3em;
+  text-align: left;
+  line-height: 1.75;
+}
+
+.title {
+  font-family: Montserrat, sans-serif;
+  font-size: 2em;
+  margin-left: 25%;
+  margin-top: 25%;
+  color: #EBEBEB;
+}
+
+.title > span {
+  font-size: 3em;
 }
