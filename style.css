@@ -16,14 +16,14 @@ body::-webkit-scrollbar {
 .navbar {
       font-family: Montserrat, sans-serif;
       margin-bottom: 0;
-      background-color: #2d2d30;
+      background-color: #2D2D30;
       border: 0;
       font-size: 11px !important;
       letter-spacing: 4px;
       opacity: 0.9;
   }
   .navbar li a, .navbar .navbar-brand {
-      color: #d5d5d5 !important;
+      color: black !important;
   }
   .navbar-nav li a:hover {
       color: #fff !important;
@@ -41,7 +41,8 @@ body::-webkit-scrollbar {
   width: 100%;
   max-height: 80%;
   padding: 0;
-  background-color: red;
+  background-image: url("images/IMG_6113_small.jpg");
+  background-position: center;
 }
 
 .text-center > h1{
