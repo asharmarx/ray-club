@@ -79,6 +79,14 @@ body::-webkit-scrollbar {
   line-height: 1.75;
 }
 
+.right > .text-center > h3 {
+  text-align: center;
+}
+
+.right > .text-center > h1 {
+  margin-top: 10%;
+}
+
 .title {
   font-family: Montserrat, sans-serif;
   font-size: 2em;
@@ -89,4 +97,39 @@ body::-webkit-scrollbar {
 
 .title > span {
   font-size: 3em;
+}
+
+#team {
+  height: 30%;
+  width: 100%;
+  max-height: 80%;
+  padding: 0;
+}
+
+.contactLeft{
+  background-color: #EBEBEB;
+  left: 0;
+  width: 70%;
+}
+.contactLeft > .names {
+  font-family: Montserrat, sans-serif;
+  margin-left: 20%;
+}
+
+
+.contactRight{
+  background-color: black;
+  right: 0;
+  width: 30%;
+}
+
+.info {
+  margin-top: 20%;
+  margin-left: 25%;
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+
+#contact .column {
+  height: 30%;
 }
