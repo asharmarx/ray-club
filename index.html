@@ -27,6 +27,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+
           </button>
           <a class="navbar-brand" href="#myPage">RC</a>
         </div>
@@ -36,6 +39,8 @@
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
             <li><a href="#photos">GALLERY</a></li>
+            <li><a href="#announce">ANNOUNCEMENTS</a></li>
+
 
           </ul>
         </div>
@@ -257,37 +262,49 @@
             <img class="demo cursor" src="images/IMG_6117.JPG" style="width:100%" onclick="currentSlide(18)">
           </div>
         </div>
+
+        <!--- javascript for the image slider --->
+
+        <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+      </div> <!---end photo container--->
+
+      <div id = "announce" class="container-fluid">
+        <div class="column announceLeft">
+          <h1>ANNOUNCEMENTS</h1>
+        </div>
+        <div class="column announceRight">
+          <h3>No new announcements</h3>
+        </div>
       </div>
 
-      <script type="text/javascript">
-      var slideIndex = 1;
-      showSlides(slideIndex);
 
-      // Next/previous controls
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      // Thumbnail image controls
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-      }
-      </script>
-
-    </div>
+</body>

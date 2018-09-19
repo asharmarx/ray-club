@@ -144,7 +144,7 @@ body::-webkit-scrollbar {
   position: relative;
   padding: 3%;
   margin: 0;
-  background-color: black;
+  background: linear-gradient(to left, #EBEBEB 50%, black 50%);
 }
 
 /* Hide the images by default */
@@ -216,4 +216,35 @@ body::-webkit-scrollbar {
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+#announce{
+  height: 80%;
+  width: 100%;
+  padding: 0;
+}
+
+.announceLeft{
+  left: 0;
+  width: 30%;
+  background-color: black;
+}
+
+.announceRight{
+  right: 0;
+  width: 70%;
+  background-color: #EBEBEB;
+}
+
+.announceLeft > h1 {
+  font-family: Montserrat, sans-serif;
+  margin-top: 50%;
+  margin-left: 1em;
+  color: white;
+}
+
+.announceRight >h3{
+  font-family: Montserrat, sans-serif;
+  margin-left: 1em;
+  color: black;
 }
