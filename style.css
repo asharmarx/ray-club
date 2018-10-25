@@ -254,4 +254,5 @@ body::-webkit-scrollbar {
   font-family: Montserrat, sans-serif;
   margin-left: 1em;
   color: black;
+  line-height: 1.5em;
 }

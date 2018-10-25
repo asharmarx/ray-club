@@ -142,7 +142,15 @@
           <h1>ANNOUNCEMENTS</h1>
         </div>
         <div class="column announceRight">
-          <h3>No new announcements</h3>
+          <h3>
+            <?php
+            $announceFile = fopen("announcements.txt","r");
+            while(!feof($announceFile)) {
+              echo fgets($announceFile) . "<br>";
+            }
+            fclose($announceFile);
+            ?>
+          </h3>
         </div>
       </div>
 
