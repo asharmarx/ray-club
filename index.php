@@ -29,6 +29,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
 
 
         </button>
@@ -42,7 +44,7 @@
           <li><a href="#members">MEMBERS</a></li>
           <li><a href="#photos">GALLERY</a></li>
           <li><a href="#announce">ANNOUNCEMENTS</a></li>
-
+          <li><a href="#pta">PTA BOARD</a></li>
 
         </ul>
       </div>
@@ -248,6 +250,14 @@
         fclose($announceFile);
         ?>
       </h3>
+    </div>
+  </div>
+
+  <div id = "pta" class="container-fluid">
+    <div class="column ptaLeft">
+    </div>
+    <div class="column ptaRight">
+      <h1>PTA BOARD</h1>
     </div>
   </div>
 

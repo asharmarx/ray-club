@@ -268,16 +268,34 @@ body::-webkit-scrollbar {
   background-color: #EBEBEB;
 }
 
-.announceLeft > h1 {
+.announceLeft > h1, .ptaRight > h1 {
   font-family: Montserrat, sans-serif;
   margin-top: 50%;
   margin-left: 1em;
   color: white;
 }
 
-.announceRight >h3{
+.announceRight > h3, .ptaLeft > h3{
   font-family: Montserrat, sans-serif;
   margin-left: 1em;
   color: black;
   line-height: 1.5em;
+}
+
+#pta{
+  height: 80%;
+  width: 100%;
+  padding: 0;
+}
+
+.ptaLeft{
+  left: 0;
+  width: 70%;
+  background-color: #EBEBEB;
+}
+
+.ptaRight{
+  right: 0;
+  width: 30%;
+  background-color: black;
 }
