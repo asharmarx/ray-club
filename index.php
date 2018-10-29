@@ -8,13 +8,13 @@
   <link rel="stylesheet" type="text/css" href="style.css"/>
 
   <link rel="icon" type="image/png" href="images/logo_background_pic/sun-logo.png">
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="smooth_scroll.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <script src="smooth_scroll.js" type="text/javascript"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -28,6 +28,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
 
         </button>
         <a class="navbar-brand" href="#myPage">RC</a>
@@ -37,6 +39,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#members">MEMBERS</a></li>
           <li><a href="#photos">GALLERY</a></li>
           <li><a href="#announce">ANNOUNCEMENTS</a></li>
 
@@ -77,6 +80,7 @@
         <h1>Director</h1>
         <h3>Kelly Kim</h3>
       </div>
+
     </div>
     <div class="column contactRight">
       <div class="info">
@@ -86,9 +90,103 @@
     </div>
   </div>
 
-  <div id="photos">
-    <div class="slideshow-container">
+  <div id = "members" class="container-fluid">
+    <?php
+    $boardPhotos = glob("images/boardPhotos/*.{jpeg,jpg,JPEG,JPG}", GLOB_BRACE);
+    $boardPhotoCount = count($boardPhotos);
+    $boardNames = array("Josephine Kim", "David Ahn", "Ina Song", "Michelle Kim", "William Mun", "Kevin Kim", "Tommy Noh", "Seokwhan Jang", "Jeonguk Hong", "Nathan Kim", "Eliana Choi", "Joanna Choi");
+    $boardDes = array("<div id = \"demo0\" class=\"text-center collapse\">
+    <p>Cerritos High School 12th</p>
+    <p>Founder 2016</p>
+    <p>Vice-President 2016-17</p>
+    <p>President 2017-18</p>
+    </div>",
 
+    "<div id = \"demo1\" class=\"text-center collapse\">
+    <p>Whitney High School 12th</p>
+    <p>Founder 2016</p>
+    <p>Vice-President 2016-17</p>
+    <p>Vice-President 2017-18</p>
+    </div>",
+
+    "<div id = \"demo2\" class=\"text-center collapse\">
+    <p>Cerritos High School 11th</p>
+    <p>Founder 2016</p>
+    <p>Secretary 2016-17</p>
+    <p>Secretary 2017-18</p>
+    </div>",
+
+    "<div id = \"demo3\" class=\"text-center collapse\">
+    <p>Cerritos High School 12th</p>
+    <p>Treasurer 2017-18</p>
+    </div>",
+
+    "<div id = \"demo4\" class=\"text-center collapse\">
+    <p>Troy High School 11th</p>
+    <p>Events Chair 2018</p>
+    </div>",
+
+    "<div id = \"demo5\" class=\"text-center collapse\">
+    <p>Diamond Bar High School 12th</p>
+    <p>Events Chair 2018</p>
+    </div>",
+
+    "<div id = \"demo6\" class=\"text-center collapse\">
+    <p>Cerritos High School 11th</p>
+    <p>Public Relations 2018</p>
+    </div>",
+
+    "<div id = \"demo7\" class=\"text-center collapse\">
+    <p>Cerritos High School 11th</p>
+    <p>Public Relations  2018</p>
+    </div>",
+
+    "<div id = \"demo8\" class=\"text-center collapse\">
+    <p>Oxford Academy 10th</p>
+    <p>Community Outreach 2018</p>
+    </div>",
+
+    "<div id = \"demo9\" class=\"text-center collapse\">
+    <p>Oxford Academy 9th</p>
+    <p>Founder 2016</p>
+    <p>Community Outreach 2018</p>
+    </div>",
+
+    "<div id = \"demo10\" class=\"text-center collapse\">
+    <p>Palos Verdes High School 12th</p>
+    <p>Fundraising Coordinator 2017-18</p>
+    </div>",
+
+    "<div id = \"demo11\" class=\"text-center collapse\">
+    <p>Palos Verdes High School 11th</p>
+    <p>Fundraising Coordinator 2017-18</p>
+    </div>");
+    $indexCount = 0;
+    for ($j=0; $j < 2; $j++) {
+      ?>
+      <div class="row">
+        <?php
+        for ($i=0; $i < $boardPhotoCount/2; $i++) {
+          ?>
+          <div class="col-sm-2">
+            <p class="text-center"><strong><?php echo "$boardNames[$indexCount]"; ?></strong></p>
+            <a href="javascript:void(0);" data-target=<?php echo "\"#demo$indexCount\"";?> data-toggle="collapse" data-parent="#members">
+              <img src=<?php echo "$boardPhotos[$indexCount]"; ?> class="img-circle person" alt="Random Name" width="255" height="255">
+            </a>
+            <?php echo "$boardDes[$indexCount]"; ?>
+          </div>
+
+          <?php
+          $indexCount += 1;
+        }
+        ?>
+      </div><br><br><br>
+      <?php
+    } ?>
+  </div>
+
+  <div id = "photos" class="container-fluid">
+    <div class="slideshow">
       <?php
       $imgFiles = glob("images/*.{jpg,jpeg,JPEG,JPG}", GLOB_BRACE);
       $numFiles = count($imgFiles);
