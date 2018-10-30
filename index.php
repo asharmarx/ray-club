@@ -16,12 +16,6 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
   <style media="screen">
-  /*
-
-  title: style.css
-  author: aman sharma
-
-  */
 
   html, body {
     height: 100%;
