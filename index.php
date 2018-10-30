@@ -4,8 +4,8 @@
 
   <title>RAY Club</title>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css"/>
 
   <link rel="icon" type="image/png" href="images/logo_background_pic/sun-logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,6 +14,321 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+  <style media="screen">
+  /*
+
+  title: style.css
+  author: aman sharma
+
+  */
+
+  html, body {
+    height: 100%;
+  }
+  body{
+    background-color: #2D2D30;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2D2D30 !important;
+    border: 0 !important;
+    font-size: 0.85em !important;
+    letter-spacing: 0.4em;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: black !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  /* HOME COLUMN */
+
+  #home{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    padding: 0;
+    background-color: #EBEBEB;
+    background-image: url("images/logo_background_pic/backgroundImage.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2em;
+  }
+
+  /* ABOUT COLUMN */
+
+  #about{
+    height: 80%;
+    width: 100%;
+    max-height: 80%;
+    padding: 0;
+  }
+
+  .column{
+    position: absolute;
+    padding: 0;
+    height: 80%;
+    overflow-x: hidden;
+  }
+
+  .left{
+    background-color: black;
+    left: 0;
+    width: 30%;
+  }
+
+  .right{
+    background-color: #EBEBEB;
+    right: 0;
+    width: 70%;
+  }
+
+  .right > .text-center {
+    font-family: Montserrat, sans-serif;
+    margin: 5% 4% 2% 8%;
+    font-size: 1.3em;
+    text-align: left;
+    line-height: 1.75;
+  }
+
+  .right > .text-center > h3 {
+    text-align: center;
+  }
+
+  .right > .text-center > h1 {
+    margin-top: 10%;
+  }
+
+  .title {
+    font-family: Montserrat, sans-serif;
+    font-size: 2em;
+    margin-left: 25%;
+    margin-top: 25%;
+    color: #EBEBEB;
+  }
+
+  .title > span {
+    font-size: 3em;
+  }
+
+  /* CONTACT COLUMN */
+
+  #contact{
+    height: 30%;
+    width: 100%;
+  }
+
+  .contactLeft{
+    background-color: #EBEBEB;
+    left: 0;
+    width: 70%;
+  }
+  .contactLeft > .names {
+    font-family: Montserrat, sans-serif;
+    margin-left: 5%;
+  }
+
+  .person {
+    border: 0.5em solid transparent;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .person:hover {
+    border-color: #CBCBCB;
+  }
+
+  .contactRight{
+    background-color: black;
+    right: 0;
+    width: 30%;
+  }
+
+  .info {
+    margin-top: 20%;
+    margin-left: 25%;
+    font-family: Montserrat, sans-serif;
+    color: white;
+  }
+
+  #contact .column {
+    height: inherit;
+  }
+
+  #members
+  {
+    background-color: #EBEBEB;
+  }
+  .collapse.show {
+    display: block !important;
+  }
+  .collapse.row.show {
+    display: flex !important;
+  }
+
+  /* Slideshow container */
+
+  #photos{
+    background-color: black;
+  }
+
+  .mySlides {
+    display: none;
+    opacity: 1 !important;
+  }
+
+  .mySlides>img {
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .slideshow {
+    max-height: auto;
+    max-width: 70%;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 1.5em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+  #announce{
+    height: 80%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .announceLeft{
+    left: 0;
+    width: 30%;
+    background-color: black;
+  }
+
+  .announceRight{
+    right: 0;
+    width: 70%;
+    background-color: #EBEBEB;
+  }
+
+  .announceLeft > h1, .ptaRight > h1 {
+    font-family: Montserrat, sans-serif;
+    margin-top: 50%;
+    margin-left: 1em;
+    color: white;
+  }
+
+  .announceRight > h3, .ptaLeft > h3{
+    font-family: Montserrat, sans-serif;
+    margin-left: 1em;
+    color: black;
+    line-height: 1.5em;
+  }
+
+  #pta{
+    height: 80%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .ptaLeft{
+    left: 0;
+    width: 70%;
+    background-color: #EBEBEB;
+  }
+
+  .ptaRight{
+    right: 0;
+    width: 30%;
+    background-color: black;
+  }
+
+  </style>
 
 </head>
 
@@ -42,10 +357,15 @@
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
           <li><a href="#members">MEMBERS</a></li>
-          <li><a href="#photos">GALLERY</a></li>
-          <li><a href="#announce">ANNOUNCEMENTS</a></li>
-          <li><a href="#pta">PTA BOARD</a></li>
-
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#photos">GALLERY</a></li>
+            <li><a href="#announce">ANNOUNCEMENTS</a></li>
+            <li><a href="#pta">PTA BOARD</a></li>
+          </ul>
+        </li>
         </ul>
       </div>
     </div>
@@ -200,7 +520,7 @@
         <div class="mySlides fade">
           <div class="numbertext"><?php echo "$currentimgNumber/$numFiles";?>
           </div>
-          <img src= <?php echo "\"$currentImage\"";?> style="width:100%">
+          <img src= <?php echo "\"$currentImage\"";?> alt="Random Name" style="width:100%">
         </div>
         <?php
       endfor; ?>
@@ -211,7 +531,7 @@
     </div>
   </div> <!--  end slideshow cointainer -->
 
-  <script text="type/javascript">
+  <script type="text/javascript">
 
   var slideIndex = 1;
   showSlides(slideIndex);
