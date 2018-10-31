@@ -7,36 +7,46 @@ author: aman sharma
 
 html, body {
   height: 100%;
+}
+body{
   background-color: #2D2D30;
 }
-
 body::-webkit-scrollbar {
   display: none;
 }
 
 .navbar {
-      font-family: Montserrat, sans-serif;
-      margin-bottom: 0;
-      background-color: #2D2D30 !important;
-      border: 0 !important;
-      font-size: 11px !important;
-      letter-spacing: 4px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-      color: #fff !important;
-  }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: black !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-    }
-
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #2D2D30 !important;
+  border: 0 !important;
+  font-size: 0.85em !important;
+  letter-spacing: 0.4em;
+  opacity: 0.9;
+}
+.navbar li a, .navbar .navbar-brand {
+  color: #d5d5d5 !important;
+}
+.navbar-nav li a:hover {
+  color: #fff !important;
+}
+.navbar-nav li.active a {
+  color: #fff !important;
+  background-color: black !important;
+}
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+}
+.open .dropdown-toggle {
+  color: #fff;
+  background-color: #555 !important;
+}
+.dropdown-menu li a {
+  color: #000 !important;
+}
+.dropdown-menu li a:hover {
+  background-color: red !important;
+}
 /* HOME COLUMN */
 
 #home{
@@ -126,16 +136,16 @@ body::-webkit-scrollbar {
 }
 
 .person {
-      border: 0.5em solid transparent;
-      margin-bottom: 0.5em;
-      width: 100%;
-      height: 100%;
-      opacity: 0.8;
-  }
+  border: 0.5em solid transparent;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
 
 .person:hover {
-      border-color: #CBCBCB;
-  }
+  border-color: #CBCBCB;
+}
 
 .contactRight{
   background-color: black;
@@ -159,11 +169,11 @@ body::-webkit-scrollbar {
   background-color: #EBEBEB;
 }
 .collapse.show {
-    display: block !important;
-  }
+  display: block !important;
+}
 .collapse.row.show {
-    display: flex !important;
-  }
+  display: flex !important;
+}
 
 /* Slideshow container */
 

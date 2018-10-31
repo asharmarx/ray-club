@@ -77,16 +77,16 @@
   /* ABOUT COLUMN */
 
   #about{
-    height: 80%;
+    height: 90%;
     width: 100%;
-    max-height: 80%;
+    max-height: 90%;
     padding: 0;
   }
 
   .column{
     position: absolute;
     padding: 0;
-    height: 80%;
+    height: 90%;
     overflow-x: hidden;
   }
 
@@ -133,7 +133,7 @@
   /* CONTACT COLUMN */
 
   #contact{
-    height: 30%;
+    height: 40%;
     width: 100%;
   }
 
@@ -166,7 +166,7 @@
   }
 
   .info {
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 25%;
     font-family: Montserrat, sans-serif;
     color: white;
@@ -176,8 +176,8 @@
     height: inherit;
   }
 
-  #members
-  {
+  #members{
+    height: auto;
     background-color: #EBEBEB;
   }
   .collapse.show {
@@ -185,6 +185,14 @@
   }
   .collapse.row.show {
     display: flex !important;
+  }
+
+  #members > p{
+    margin-top: 2%;
+    text-align: center;
+    font-size: 2.5em;
+    color: black;
+    font-family: Montserrat, sans-serif;
   }
 
   /* Slideshow container */
@@ -340,8 +348,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
 
-
-
         </button>
         <a class="navbar-brand" href="#myPage">RC</a>
       </div>
@@ -350,7 +356,7 @@
           <li><a href="#home">HOME</a></li>
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#contact">CONTACT</a></li>
-          <li><a href="#members">MEMBERS</a></li>
+          <li><a href="#members">BOARD</a></li>
           <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
           <span class="caret"></span></a>
@@ -381,7 +387,7 @@
         <h1>Vision</h1>
         <p>The vision of RAY is embodied in its name. The club strives to equip and nurture orphaned youth, so that they may find the capacity of resilience within themselves. Resilience is defined as "the capacity to recover quickly from difficulities"</p>
         <h1>Mission</h1>
-        <p>How will we achieve this? We will create a safe and exciting environment in which kids can learn new skills, and participate in fun activities. We only go to the orphanage twice a month, our hope is that the kids can utilize the skills and activities we put together, in order to learn how to build and strengthen current and future relationships.</p>
+        <p>How will we achieve this? We will create a safe and exciting environment in which kids can learn new skills and participate in fun activities such as painting nails, playing guitars, and creating art crafts. We will also play sports like volleyball, basketball, and soccer. Additionally, we will have an infant childcare program for new, teen mothers. We will also provide snacks for the orphaned youth to enjoy. We go to the orphanage 2-3 times a month in hope that the kids can utilize the skills and activities we put together to learn how to build and strengthen current and future relationships.</p>
 
       </div>
     </div>
@@ -393,13 +399,16 @@
       <div class="names">
         <h1>President</h1>
         <h3>Josephine Kim</h3>
-        <h1>Director</h1>
-        <h3>Kelly Kim</h3>
+        <h3>Cerritos High School 12th</h3>
+
+
       </div>
 
     </div>
     <div class="column contactRight">
       <div class="info">
+        <h1>Director</h1>
+        <h3>Kelly Kim</h3>
         <h1>Contact:</h1>
         <h2>(562) 241 5678</h2>
       </div>
@@ -407,6 +416,7 @@
   </div>
 
   <div id = "members" class="container-fluid">
+      <p><strong>2018 Board Memebers</strong></p>
     <?php
     $boardPhotos = glob("images/boardPhotos/*.{jpeg,jpg,JPEG,JPG}", GLOB_BRACE);
     $boardPhotoCount = count($boardPhotos);
@@ -485,10 +495,10 @@
         for ($i=0; $i < $boardPhotoCount/2; $i++) {
           ?>
           <div class="col-sm-2">
-            <p class="text-center"><strong><?php echo "$boardNames[$indexCount]"; ?></strong></p>
             <a href="javascript:void(0);" data-target=<?php echo "\"#demo$indexCount\"";?> data-toggle="collapse" data-parent="#members">
               <img src=<?php echo "$boardPhotos[$indexCount]"; ?> class="img-circle person" alt="Random Name" width="255" height="255">
             </a>
+            <p class="text-center"><strong><?php echo "$boardNames[$indexCount]"; ?></strong></p>
             <?php echo "$boardDes[$indexCount]"; ?>
           </div>
 
