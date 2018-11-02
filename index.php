@@ -358,234 +358,185 @@
           <li><a href="#contact">CONTACT</a></li>
           <li><a href="#members">BOARD</a></li>
           <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
-          <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#photos">GALLERY</a></li>
-            <li><a href="#announce">ANNOUNCEMENTS</a></li>
-            <li><a href="#pta">PTA BOARD</a></li>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#photos">GALLERY</a></li>
+                <li><a href="#announce">ANNOUNCEMENTS</a></li>
+                <li><a href="#pta">PTA BOARD</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div id = "home" class="container-fluid"></div>
-
-  <div id = "about" class="container-fluid row">
-    <div class="column left">
-      <div class="title">
-        <span>R</span> esilience <br>
-        <span>A</span> mongst <br>
-        <span>Y</span> outh
-      </div>
-    </div>
-    <div class="column right">
-      <div class="text-center">
-        <h3>RAY is a club dedicated to supporting orphaned youth</h3>
-        <h1>Vision</h1>
-        <p>The vision of RAY is embodied in its name. The club strives to equip and nurture orphaned youth, so that they may find the capacity of resilience within themselves. Resilience is defined as "the capacity to recover quickly from difficulities"</p>
-        <h1>Mission</h1>
-        <p>How will we achieve this? We will create a safe and exciting environment in which kids can learn new skills and participate in fun activities such as painting nails, playing guitars, and creating art crafts. We will also play sports like volleyball, basketball, and soccer. Additionally, we will have an infant childcare program for new, teen mothers. We will also provide snacks for the orphaned youth to enjoy. We go to the orphanage 2-3 times a month in hope that the kids can utilize the skills and activities we put together to learn how to build and strengthen current and future relationships.</p>
-
-      </div>
-    </div>
-  </div>
-
-
-  <div id = "contact" class="container-fluid row">
-    <div class="column contactLeft">
-      <div class="names">
-        <h1>President</h1>
-        <h3>Josephine Kim</h3>
-        <h3>Cerritos High School 12th</h3>
-
-
-      </div>
-
-    </div>
-    <div class="column contactRight">
-      <div class="info">
-        <h1>Director</h1>
-        <h3>Kelly Kim</h3>
-        <h1>Contact:</h1>
-        <h2>(562) 241 5678</h2>
-      </div>
-    </div>
-  </div>
-
-  <div id = "members" class="container-fluid">
-      <p><strong>2018 Board Memebers</strong></p>
-    <?php
-    $boardPhotos = glob("images/boardPhotos/*.{jpeg,jpg,JPEG,JPG}", GLOB_BRACE);
-    $boardPhotoCount = count($boardPhotos);
-    $boardNames = array("Josephine Kim", "David Ahn", "Ina Song", "Michelle Kim", "William Mun", "Kevin Kim", "Tommy Noh", "Seokwhan Jang", "Jeonguk Hong", "Nathan Kim", "Eliana Choi", "Joanna Choi");
-    $boardDes = array("<div id = \"demo0\" class=\"text-center collapse\">
-    <p>Cerritos High School 12th</p>
-    <p>Founder 2016</p>
-    <p>Vice-President 2016-17</p>
-    <p>President 2017-18</p>
-    </div>",
-
-    "<div id = \"demo1\" class=\"text-center collapse\">
-    <p>Whitney High School 12th</p>
-    <p>Founder 2016</p>
-    <p>Vice-President 2016-17</p>
-    <p>Vice-President 2017-18</p>
-    </div>",
-
-    "<div id = \"demo2\" class=\"text-center collapse\">
-    <p>Cerritos High School 11th</p>
-    <p>Founder 2016</p>
-    <p>Secretary 2016-17</p>
-    <p>Secretary 2017-18</p>
-    </div>",
-
-    "<div id = \"demo3\" class=\"text-center collapse\">
-    <p>Cerritos High School 12th</p>
-    <p>Treasurer 2017-18</p>
-    </div>",
-
-    "<div id = \"demo4\" class=\"text-center collapse\">
-    <p>Troy High School 11th</p>
-    <p>Events Chair 2018</p>
-    </div>",
-
-    "<div id = \"demo5\" class=\"text-center collapse\">
-    <p>Diamond Bar High School 12th</p>
-    <p>Events Chair 2018</p>
-    </div>",
-
-    "<div id = \"demo6\" class=\"text-center collapse\">
-    <p>Cerritos High School 11th</p>
-    <p>Public Relations 2018</p>
-    </div>",
-
-    "<div id = \"demo7\" class=\"text-center collapse\">
-    <p>Cerritos High School 11th</p>
-    <p>Public Relations  2018</p>
-    </div>",
-
-    "<div id = \"demo8\" class=\"text-center collapse\">
-    <p>Oxford Academy 10th</p>
-    <p>Community Outreach 2018</p>
-    </div>",
-
-    "<div id = \"demo9\" class=\"text-center collapse\">
-    <p>Oxford Academy 9th</p>
-    <p>Founder 2016</p>
-    <p>Community Outreach 2018</p>
-    </div>",
-
-    "<div id = \"demo10\" class=\"text-center collapse\">
-    <p>Palos Verdes High School 12th</p>
-    <p>Fundraising Coordinator 2017-18</p>
-    </div>",
-
-    "<div id = \"demo11\" class=\"text-center collapse\">
-    <p>Palos Verdes High School 11th</p>
-    <p>Fundraising Coordinator 2017-18</p>
-    </div>");
-    $indexCount = 0;
-    for ($j=0; $j < 2; $j++) {
-      ?>
-      <div class="row">
-        <?php
-        for ($i=0; $i < $boardPhotoCount/2; $i++) {
-          ?>
-          <div class="col-sm-2">
-            <a href="javascript:void(0);" data-target=<?php echo "\"#demo$indexCount\"";?> data-toggle="collapse" data-parent="#members">
-              <img src=<?php echo "$boardPhotos[$indexCount]"; ?> class="img-circle person" alt="Random Name" width="255" height="255">
-            </a>
-            <p class="text-center"><strong><?php echo "$boardNames[$indexCount]"; ?></strong></p>
-            <?php echo "$boardDes[$indexCount]"; ?>
-          </div>
-
-          <?php
-          $indexCount += 1;
-        }
-        ?>
-      </div><br><br><br>
-      <?php
-    } ?>
-  </div>
-
-  <div id = "photos" class="container-fluid">
-    <div class="slideshow">
-      <?php
-      $imgFiles = glob("images/*.{jpg,jpeg,JPEG,JPG}", GLOB_BRACE);
-      $numFiles = count($imgFiles);
-      for($i = 0; $i < $numFiles; $i++):
-        $currentImage = $imgFiles[$i];
-        $imgString = "\"images/";
-        $currentimgNumber = $i + 1;
-        ?>
-        <div class="mySlides fade">
-          <div class="numbertext"><?php echo "$currentimgNumber/$numFiles";?>
-          </div>
-          <img src= <?php echo "\"$currentImage\"";?> alt="Random Name" style="width:100%">
         </div>
-        <?php
-      endfor; ?>
+      </div>
+    </nav>
 
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div id = "home" class="container-fluid"></div>
+
+    <div id = "about" class="container-fluid row">
+      <div class="column left">
+        <div class="title">
+          <span>R</span> esilience <br>
+          <span>A</span> mongst <br>
+          <span>Y</span> outh
+        </div>
+      </div>
+      <div class="column right">
+        <div class="text-center">
+          <h3>RAY is a club dedicated to supporting orphaned youth</h3>
+          <h1>Vision</h1>
+          <p>The vision of RAY is embodied in its name. The club strives to equip and nurture orphaned youth, so that they may find the capacity of resilience within themselves. Resilience is defined as "the capacity to recover quickly from difficulities"</p>
+          <h1>Mission</h1>
+          <p>How will we achieve this? We will create a safe and exciting environment in which kids can learn new skills and participate in fun activities such as painting nails, playing guitars, and creating art crafts. We will also play sports like volleyball, basketball, and soccer. Additionally, we will have an infant childcare program for new, teen mothers. We will also provide snacks for the orphaned youth to enjoy. We go to the orphanage 2-3 times a month in hope that the kids can utilize the skills and activities we put together to learn how to build and strengthen current and future relationships.</p>
+
+        </div>
+      </div>
     </div>
-  </div> <!--  end slideshow cointainer -->
 
-  <script type="text/javascript">
 
-  var slideIndex = 1;
-  showSlides(slideIndex);
+    <div id = "contact" class="container-fluid row">
+      <div class="column contactLeft">
+        <div class="names">
+          <h1>President</h1>
+          <h3>Josephine Kim</h3>
+          <h3>Cerritos High School 12th</h3>
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+        </div>
 
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex-1].style.display = "block";
-  }
-  </script>
-
-  <div id = "announce" class="container-fluid">
-    <div class="column announceLeft">
-      <h1>ANNOUNCEMENTS</h1>
+      </div>
+      <div class="column contactRight">
+        <div class="info">
+          <h1>Director</h1>
+          <h3>Kelly Kim</h3>
+          <h1>Contact:</h1>
+          <h2>(562) 241 5678</h2>
+        </div>
+      </div>
     </div>
-    <div class="column announceRight">
-      <h3>
-        <?php
-        $announceFile = fopen("announcements.txt","r");
-        while(!feof($announceFile)) {
-          echo fgets($announceFile) . "<br>";
-        }
-        fclose($announceFile);
+
+    <div id = "members" class="container-fluid">
+      <p><strong>2018 Board Memebers</strong></p>
+      <?php
+      $boardPhotos = glob("images/boardPhotos/*.{jpeg,jpg,JPEG,JPG}", GLOB_BRACE);
+      $boardPhotoCount = count($boardPhotos);
+      $boardNames = array("Josephine Kim", "David Ahn", "Ina Song", "Michelle Kim", "William Mun", "Kevin Kim", "Tommy Noh", "Seokwhan Jang", "Jeonguk Hong", "Nathan Kim", "Eliana Choi", "Joanna Choi");
+      $indexCount = 0;
+      $handle = fopen("boardDes.csv", "r");
+      for ($j=0; $j < 2; $j++) {
         ?>
-      </h3>
+        <div class="row">
+          <?php
+          for ($i=0; $i < $boardPhotoCount/2; $i++) {
+            ?>
+            <div class="col-sm-2">
+              <a href="javascript:void(0);" data-target=<?php echo "\"#demo$indexCount\"";?> data-toggle="collapse" data-parent="#members">
+                <img src=<?php echo "$boardPhotos[$indexCount]"; ?> class="img-circle person" alt="Random Name" width="255" height="255">
+              </a>
+              <p class="text-center"><strong><?php echo "$boardNames[$indexCount]"; ?></strong></p>
+
+              <?php
+              $data = fgetcsv($handle, 1000, ",");
+              ?>
+              <div id=<?php echo "\"demo$indexCount\""; ?> class="text-center collapse">
+                <?php
+                $num = count($data);
+                for ($c=0; $c < $num; $c++) {
+                  echo "<p>". $data[$c] . "</p>\n";
+                }
+
+
+                ?>
+              </div>
+
+            </div>
+
+            <?php
+            $indexCount += 1;
+          }
+          ?>
+        </div><br><br><br>
+        <?php
+      }
+      fclose($handle);
+      ?>
     </div>
-  </div>
 
-  <div id = "pta" class="container-fluid">
-    <div class="column ptaLeft">
+
+    <div id = "photos" class="container-fluid">
+      <div class="slideshow">
+        <?php
+        $imgFiles = glob("images/*.{jpg,jpeg,JPEG,JPG}", GLOB_BRACE);
+        $numFiles = count($imgFiles);
+        for($i = 0; $i < $numFiles; $i++):
+          $currentImage = $imgFiles[$i];
+          $currentimgNumber = $i + 1;
+          ?>
+          <div class="mySlides fade">
+            <div class="numbertext"><?php echo "$currentimgNumber/$numFiles";?>
+            </div>
+            <img src= <?php echo "\"$currentImage\"";?> alt="Random Name" style="width:100%">
+          </div>
+          <?php
+        endfor; ?>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </div> <!--  end slideshow cointainer -->
+
+    <script type="text/javascript">
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+    </script>
+
+    <div id = "announce" class="container-fluid">
+      <div class="column announceLeft">
+        <h1>ANNOUNCEMENTS</h1>
+      </div>
+      <div class="column announceRight">
+        <h3>
+          <?php
+          $announceFile = fopen("announcements.txt","r");
+          while(!feof($announceFile)) {
+            echo fgets($announceFile) . "<br>";
+          }
+          fclose($announceFile);
+          ?>
+        </h3>
+      </div>
     </div>
-    <div class="column ptaRight">
-      <h1>PTA BOARD</h1>
+
+    <div id = "pta" class="container-fluid">
+      <div class="column ptaLeft">
+      </div>
+      <div class="column ptaRight">
+        <h1>PTA BOARD</h1>
+      </div>
     </div>
-  </div>
 
 
-</body>
+  </body>
 
-</html>
+  </html>
